@@ -14,6 +14,9 @@
 		49D6C9A8201E6D9D00CD66E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D6C9A6201E6D9D00CD66E3 /* LaunchScreen.storyboard */; };
 		49D6C9B3201E6D9E00CD66E3 /* rapProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6C9B2201E6D9E00CD66E3 /* rapProjectTests.swift */; };
 		49D6C9BE201E6D9E00CD66E3 /* rapProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6C9BD201E6D9E00CD66E3 /* rapProjectUITests.swift */; };
+		49D6C9CD201E6E3100CD66E3 /* ACTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6C9CC201E6E3100CD66E3 /* ACTopBar.swift */; };
+		49D6C9CF201E6E7C00CD66E3 /* ACTopBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D6C9CE201E6E7C00CD66E3 /* ACTopBar.xib */; };
+		49D6C9D2201E798000CD66E3 /* ACMainFeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6C9D1201E798000CD66E3 /* ACMainFeedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		49D6C9B9201E6D9E00CD66E3 /* rapProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rapProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D6C9BD201E6D9E00CD66E3 /* rapProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rapProjectUITests.swift; sourceTree = "<group>"; };
 		49D6C9BF201E6D9E00CD66E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49D6C9CC201E6E3100CD66E3 /* ACTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTopBar.swift; sourceTree = "<group>"; };
+		49D6C9CE201E6E7C00CD66E3 /* ACTopBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACTopBar.xib; sourceTree = "<group>"; };
+		49D6C9D1201E798000CD66E3 /* ACMainFeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMainFeedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,11 @@
 		49D6C99C201E6D9D00CD66E3 /* rapProject */ = {
 			isa = PBXGroup;
 			children = (
+				49D6C9D0201E771000CD66E3 /* Domain */,
 				49D6C99D201E6D9D00CD66E3 /* AppDelegate.swift */,
 				49D6C99F201E6D9D00CD66E3 /* ViewController.swift */,
 				49D6C9A1201E6D9D00CD66E3 /* Main.storyboard */,
+				49D6C9CB201E6E0C00CD66E3 /* views */,
 				49D6C9A4201E6D9D00CD66E3 /* Assets.xcassets */,
 				49D6C9A6201E6D9D00CD66E3 /* LaunchScreen.storyboard */,
 				49D6C9A9201E6D9D00CD66E3 /* Info.plist */,
@@ -123,6 +131,23 @@
 				49D6C9BF201E6D9E00CD66E3 /* Info.plist */,
 			);
 			path = rapProjectUITests;
+			sourceTree = "<group>";
+		};
+		49D6C9CB201E6E0C00CD66E3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				49D6C9CC201E6E3100CD66E3 /* ACTopBar.swift */,
+				49D6C9CE201E6E7C00CD66E3 /* ACTopBar.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		49D6C9D0201E771000CD66E3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				49D6C9D1201E798000CD66E3 /* ACMainFeedData.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D6C9A8201E6D9D00CD66E3 /* LaunchScreen.storyboard in Resources */,
+				49D6C9CF201E6E7C00CD66E3 /* ACTopBar.xib in Resources */,
 				49D6C9A5201E6D9D00CD66E3 /* Assets.xcassets in Resources */,
 				49D6C9A3201E6D9D00CD66E3 /* Main.storyboard in Resources */,
 			);
@@ -259,7 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D6C9CD201E6E3100CD66E3 /* ACTopBar.swift in Sources */,
 				49D6C9A0201E6D9D00CD66E3 /* ViewController.swift in Sources */,
+				49D6C9D2201E798000CD66E3 /* ACMainFeedData.swift in Sources */,
 				49D6C99E201E6D9D00CD66E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
