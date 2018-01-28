@@ -1,0 +1,6 @@
+framework module Pods_rapProjectUITests {
+  umbrella header "Pods-rapProjectUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

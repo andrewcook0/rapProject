@@ -15,7 +15,7 @@ enum TopBarScrollDirection {
 
 enum ACTopBarTitle {
     case promoted
-    case tending
+    case trending
     case recent
 }
 
@@ -23,17 +23,27 @@ protocol ACTopBarDelegate {
     func topBarDidScroll(direction: TopBarScrollDirection)
 }
 
-class ACTopBar : UIView, UIScrollViewDelegate {
+class ACTopBar : UIView {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var delegate : ACTopBarDelegate? = nil
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        if self.lastContentOffset < scrollView.contentOffset.x {
-            self.delegate?.topBarDidScroll(direction: .right)
-        }
-        else {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
+    
+    @objc func scrollViewSwiped(direction: UISwipeGestureRecognizerDirection) {
+        if direction == .left {
             self.delegate?.topBarDidScroll(direction: .left)
+        } else if direction == .right {
+            self.delegate?.topBarDidScroll(direction: .right)
         }
     }
 }
